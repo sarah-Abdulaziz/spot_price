@@ -15,7 +15,7 @@ import numpy as np
 
 def file_name():
     p="/*.2xlarge_linux"
-    mypath=r'C:\Users\sara\Desktop\data\m4'
+    mypath=r'm4'
     allFiles = glob.glob(mypath + p)
     result=list()
     file_list=list()
@@ -41,7 +41,7 @@ def file_name():
         result_ave = np.average(sumArmse)
         result.append(result_ave)
         file_list.append(FileName)
-        with open(r'C:\Users\sara\Desktop\data\m4\Mm3.txt', 'wb') as outfile:
+        with open(r'Mm3.txt', 'wb') as outfile:
             for i  in range(len(result)) :
                     out_list =" "
                     out_list +=  file_list[i] + ", the RMSE is : " + str(result[i])+"\n"
